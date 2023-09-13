@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+<title>Sign Up</title>
+{% endblock %}
+{% block content %}
+{% include 'navbar.html' %}
+
+<style>
+  body {
+    background-image: url("{% static 'images/bg3.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust as needed to cover the entire viewport height */
+  }
+</style>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="offset-md-4 col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <form class=""  method="POST">
+            <div class="text-center">
+              <h3>Sign Up</h3>
+            </div>
+            {% csrf_token %}
+            {{form|crispy}}
+            <div class="text-center">
+              <input type="submit" name="" value="Submit"class="btn btn-outline-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+      </div>
+        </div>
+{% endblock %}

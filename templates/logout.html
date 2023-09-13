@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+<title>Logout</title>
+{% endblock %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container">
+  <div class="row">
+    <div class="offset-md-4 col-md-4">
+    <div class="card mt-5">
+      <div class="card-body">
+        <div class="text-center">
+          <h4>Logout Page</h4>
+        </div>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <strong>you have been logged out</strong>
+       </div>
+        <a href="{% url 'login' %}">Login</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
